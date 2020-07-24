@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring-Comunev</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="application">
+            <div class="container">
+                <div class="application-content">
+                    <form method="post" id="application-form" action="/detailsform" name="DetailForm" onsubmit="return validateForm()">
+                        <h2 class="title">Application Form</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Enter Full Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Enter Email" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="url" class="form-input" name="portfolio" id="portfolio" placeholder="Enter Portfolio Link" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="position" id="position" placeholder="Enter position you are applying for" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="qualification" id="qualification" placeholder="Enter Higher Qualification" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script>
+            function validateForm() {
+                var a = document.forms["DetailForm"]["name"].value;
+                var b = document.forms["DetailForm"]["email"].value;
+                var c = document.forms["DetailForm"]["portfolio"].value;
+                var d = document.forms["DetailForm"]["position"].value;
+                var e = document.forms["DetailForm"]["qualification"].value;
+                if (a != "" && b != "" && c != "" && d != "" && e != "") {
+                    alert("Submitted Successfully!");
+                }
+            }
+        </script>
+</body>
+</html>
